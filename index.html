@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Make the Difference Growing</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <!-- Start Screen -->
     <div id="start-screen" class="screen active">
         <div class="start-background">
-            <img src="assets/images/pantalla de inicio.png" alt="Start Background" class="background-image">
+            <img src="./assets/images/pantalla de inicio.png" alt="Start Background" class="background-image">
             <div style="position:absolute;bottom:-30px;left:0;width:100%;display:flex;justify-content:center;">
                 <button id="start-button" class="start-btn">
-                    <img src="assets/images/Botón INICIO.png" alt="Start Button">
+                    <img src="./assets/images/Botón INICIO.png" alt="Start Button">
                 </button>
             </div>
         </div>
@@ -22,11 +22,10 @@
     <!-- Quiz Screen -->
     <div id="quiz-screen" class="screen">
         <div class="quiz-background">
-            <img src="assets/images/Fondo preguntas.jpg" alt="Quiz Background" class="background-image">
+            <img src="./assets/images/Fondo preguntas.jpg" alt="Quiz Background" class="background-image">
             <div class="quiz-content">
                 <h2>Responde la encuesta</h2>
                 
-                <!-- Formulario con clase -->
                 <form id="quiz-form" class="quiz-form">
                     <label for="playerName">Tu nombre:</label>
                     <input type="text" id="playerName" placeholder="Escribe tu nombre...">
@@ -61,7 +60,6 @@
                         <label><input type="radio" name="q5" value="mente"> Conocimiento</label>
                     </div>
 
-                    <!-- Botón -->
                     <button type="button" id="submit-quiz-btn">Finalizar</button>
                 </form>
             </div>
@@ -74,19 +72,19 @@
             <h2>Elige tu mascota</h2>
             <div class="pet-options">
                 <button class="pet-option" data-pet="gatito">
-                    <img src="assets/images/gatito.png" alt="Gatito">
+                    <img src="./assets/images/gatito.png" alt="Gatito">
                     <span>Gatito</span>
                 </button>
                 <button class="pet-option" data-pet="perrito">
-                    <img src="assets/images/perrito.png" alt="Gallito de Rocas">
+                    <img src="./assets/images/perrito.png" alt="Gallito de Rocas">
                     <span>Gallito de Rocas</span>
                 </button>
                 <button class="pet-option" data-pet="lorito">
-                    <img src="assets/images/lorito.png" alt="Ciguita Palmera">
+                    <img src="./assets/images/lorito.png" alt="Ciguita Palmera">
                     <span>Ciguita Palmera</span>
                 </button>
                 <button class="pet-option" data-pet="conejito">
-                    <img src="assets/images/conejito.png" alt="Hornerito">
+                    <img src="./assets/images/conejito.png" alt="Hornerito">
                     <span>Hornerito</span>
                 </button>
             </div>
@@ -102,30 +100,26 @@
         <!-- Home Screen -->
         <div id="home-screen" class="game-screen active">
             <div class="room-background">
-                <img src="assets/images/Room.png" alt="Room Background" class="background-image">
+                <img src="./assets/images/Room.png" alt="Room Background" class="background-image">
                 <div class="room-content">
-                    <!-- Apartado de metas en la esquina superior izquierda -->
                     <div style="position: absolute; top: 20px; left: 20px; width: 270px; z-index: 20;">
                         <button id="add-goal-btn" class="add-goal-btn">+ Agregar Meta</button>
                         <div id="goals-list" class="goals-list"></div>
                         <div id="goal-medals" style="margin-top:1rem;display:flex;gap:8px;"></div>
                     </div>
-                    <!-- Progress Bar -->
                     <div class="progress-container">
-                        <img id="progress-bar" src="assets/images/progreso0.png" alt="Progress Bar">
+                        <img id="progress-bar" src="./assets/images/progreso0.png" alt="Progress Bar">
                     </div>
-                    <!-- Plant + Pet together -->
                     <div class="plant-pet-container">
                         <div class="plant-container">
-                            <img id="current-plant" src="assets/images/Plant1.png" alt="Plant" class="plant">
+                            <img id="current-plant" src="./assets/images/Plant1.png" alt="Plant" class="plant">
                         </div>
                         <div class="pet-container">
-                            <img id="current-pet" src="assets/images/gatito.png" alt="Pet" class="pet" style="cursor:pointer;">
+                            <img id="current-pet" src="./assets/images/gatito.png" alt="Pet" class="pet" style="cursor:pointer;">
                             <div id="pet-message-box" style="position:absolute;top:-60px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,0.95);border-radius:15px;border:2px solid #d4a5d8;padding:0.7rem 1.2rem;font-size:1rem;color:#5d4e75;display:none;z-index:100;"></div>
                         </div>
                     </div>
                 </div>
-                <!-- Goals Panel (fijo arriba derecha) -->
                 <div class="goals-panel">
                     <h3>Metas</h3>
                     <div id="goals-panel-list" class="goals-panel-list"></div>
@@ -138,7 +132,7 @@
             <div class="profile-content">
                 <h2>Perfil</h2>
                 <div class="profile-icon-container">
-                    <img id="profile-icon" src="assets/images/Corazón.png" alt="Profile Icon" class="profile-icon">
+                    <img id="profile-icon" src="./assets/images/Corazón.png" alt="Profile Icon" class="profile-icon">
                     <div id="profile-result-box" style="margin:1rem 0;font-size:1.1rem;color:#5d4e75;text-align:center;"></div>
                     <div id="profile-user-name" style="margin-bottom:1rem;font-size:1.1rem;color:#5d4e75;text-align:center;"></div>
                 </div>
@@ -147,7 +141,7 @@
                     <p>Nivel de planta: <span id="plant-level">1</span></p>
                 </div>
                 <div class="achievements-shelf">
-                    <img src="assets/images/estante de logros.png" alt="Achievement Shelf" class="shelf-background">
+                    <img src="./assets/images/estante de logros.png" alt="Achievement Shelf" class="shelf-background">
                     <div class="achievement-slots">
                         <div class="achievement-slot" id="achievement-5goals"></div>
                         <div class="achievement-slot" id="achievement-10goals"></div>
@@ -165,9 +159,9 @@
             <div class="plant-detail-content">
                 <h2>Tu Planta</h2>
                 <div class="plant-detail-container">
-                    <img id="plant-detail" src="assets/images/Plant1.png" alt="Plant Detail" class="plant-detail">
+                    <img id="plant-detail" src="./assets/images/Plant1.png" alt="Plant Detail" class="plant-detail">
                     <button id="water-plant-btn" class="water-btn">
-                        <img src="assets/images/Regadera.png" alt="Watering Can">
+                        <img src="./assets/images/Regadera.png" alt="Watering Can">
                     </button>
                 </div>
                 <div class="plant-info">
@@ -183,20 +177,20 @@
                 <h2>Mascotas</h2>
                 <div class="current-pet-display">
                     <h3>Mascota actual:</h3>
-                    <img id="current-pet-display" src="assets/images/gatito.png" alt="Current Pet" class="current-pet-img">
+                    <img id="current-pet-display" src="./assets/images/gatito.png" alt="Current Pet" class="current-pet-img">
                 </div>
                 <div class="pet-selection-grid">
                     <button class="pet-change-option" data-pet="gatito">
-                        <img src="assets/images/gatito.png" alt="Gatito">
+                        <img src="./assets/images/gatito.png" alt="Gatito">
                     </button>
                     <button class="pet-change-option" data-pet="perrito">
-                        <img src="assets/images/perrito.png" alt="Gallito de Rocas">
+                        <img src="./assets/images/perrito.png" alt="Gallito de Rocas">
                     </button>
                     <button class="pet-change-option" data-pet="lorito">
-                        <img src="assets/images/lorito.png" alt="Ciguita Palmera">
+                        <img src="./assets/images/lorito.png" alt="Ciguita Palmera">
                     </button>
                     <button class="pet-change-option" data-pet="conejito">
-                        <img src="assets/images/conejito.png" alt="Hornerito">
+                        <img src="./assets/images/conejito.png" alt="Hornerito">
                     </button>
                 </div>
             </div>
@@ -220,19 +214,19 @@
         <!-- Bottom Navigation -->
         <nav class="bottom-nav">
             <button class="nav-btn" data-screen="pets-screen">
-                <img src="assets/images/gato.png" alt="Pets">
+                <img src="./assets/images/gato.png" alt="Pets">
             </button>
             <button class="nav-btn" data-screen="profile-screen">
-                <img src="assets/images/estrella.png" alt="Profile">
+                <img src="./assets/images/estrella.png" alt="Profile">
             </button>
             <button class="nav-btn active" data-screen="home-screen">
-                <img src="assets/images/casa.png" alt="Home">
+                <img src="./assets/images/casa.png" alt="Home">
             </button>
             <button class="nav-btn" data-screen="plant-screen">
-                <img src="assets/images/regadera.png" alt="Plant">
+                <img src="./assets/images/regadera.png" alt="Plant">
             </button>
             <button class="nav-btn" data-screen="settings-screen">
-                <img src="assets/images/engranaje.png" alt="Settings">
+                <img src="./assets/images/engranaje.png" alt="Settings">
             </button>
         </nav>
     </div>
@@ -249,6 +243,6 @@
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
