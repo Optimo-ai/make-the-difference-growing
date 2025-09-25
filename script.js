@@ -17,6 +17,7 @@ class GameState {
       },
       soundEnabled: true,
       firstTime: true,
+      waterCount: 0, // Nuevo contador de riegos
     }
 
     // Load saved data from localStorage
@@ -54,6 +55,7 @@ class GameState {
       },
       soundEnabled: true,
       firstTime: true,
+      waterCount: 0, // Reiniciar contador de riegos
     }
     this.saveGame()
   }
@@ -139,10 +141,10 @@ class PlantSystem {
       `${gameState.data.plantProgress}/${this.maxProgressPerLevel}`
   }
 
-  // Add progress to plant (ahora sube cada dos metas completadas)
+  // Add progress to plant (ahora sube cada dos riegos)
   addProgress() {
-    // Solo suma progreso si el número de metas completadas es par y mayor a 0
-    if (gameState.data.completedGoals > 0 && gameState.data.completedGoals % 2 === 0) {
+    gameState.data.waterCount = (gameState.data.waterCount || 0) + 1
+    if (gameState.data.waterCount % 2 === 0) {
       gameState.data.plantProgress++
       if (gameState.data.plantProgress >= this.maxProgressPerLevel && gameState.data.plantLevel < this.maxLevel) {
         gameState.data.plantLevel++
